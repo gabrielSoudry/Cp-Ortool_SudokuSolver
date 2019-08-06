@@ -45,6 +45,7 @@ def solveSudoku(sudoku):
         column = []
         for j in range(9):
             column.append(sudoku[j][i])
+        model.AddAllDifferent(column)
 
     # Constraint in sector
     for index in range(9):
