@@ -62,7 +62,7 @@ def solveSudoku(sudoku):
     status = solver.Solve(model)
 
     print("==================")
-    if status == cp_model.FEASIBLE:
+    if status == cp_model.FEASIBLE or status == cp_model.OPTIMAL:
         for i in range(9):
             for j in range(9):
                 print(solver.Value(sudoku[i][j]), end=" ")
